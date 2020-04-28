@@ -7,6 +7,7 @@ Instructions :
 A. Initial Setup
 
   1. Setup the git 
+    
     1. open gitbash
     2. Go to the location where you want to store the repo(local) - (Eg: cd Documents or cd /D/Foldername/Foldername/)
     3. Clone the project (git clone https://github.com/nightfury14/ssdhp.git)
