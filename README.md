@@ -23,4 +23,5 @@ B. Uploading Files
   3. Add files (git add .)
   4. Commit files (git commit -m "your-message")
   5. Push the repo (git push origin master) * for first time - login with credentials
+  6. Update to others on whatsapp!
  
