@@ -6,7 +6,7 @@ Instructions :
 
 A. Initial Setup
 
-  1. Setup the git 
+  *. Setup the git 
     - open gitbash
     - go to the location where you want to store the repo(local) - (Eg: cd Documents or cd /D/Foldername/Foldername/)
     - Clone the project (git clone 
