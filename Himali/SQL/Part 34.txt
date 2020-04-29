@@ -1,0 +1,25 @@
+
+Local Table
+Create Procedure spCreateLocalTempTable
+as
+Begin
+Create Table #PersonDetails(Id int, Name nvarchar(20))
+
+Insert into #PersonDetails Values(1, 'Shivam')
+Insert into #PersonDetails Values(2, 'Pavan')
+Insert into #PersonDetails Values(3, 'Suyog')
+
+Select * from #PersonDetails
+End
+
+Execute spCreateLocalTempTable
+
+
+Global Table
+
+Create Table ##EmployeeDetails(Id int, Name nvarchar(20))
+
+Select * From ##EmployeeDetails
+
+Insert into ##EmployeeDetails Values(1, 'Arjun')
+Insert into ##EmployeeDetails Values(2, 'Saurabh')

@@ -1,0 +1,86 @@
+
+Part 30
+CREATE FUNCTION Age(@DOB Date)  
+RETURNS INT  
+AS  
+BEGIN  
+ DECLARE @Age INT  
+ SET @Age = DATEDIFF(YEAR, @DOB, GETDATE()) - CASE WHEN (MONTH(@DOB) > MONTH(GETDATE())) OR (MONTH(@DOB) = MONTH(GETDATE()) AND DAY(@DOB) > DAY(GETDATE())) THEN 1 ELSE 0 END  
+ RETURN @Age  
+END
+
+
+Select dbo.Age( dbo.Age('05-25-1994'))
+
+
+Part 31
+CREATE FUNCTION fn_EmployeesByGender(@Gender nvarchar(10))
+RETURNS TABLE
+AS
+RETURN (Select Id, Name, DateOfBirth, Gender, DepartmentId
+      from tblEmployees
+      where Gender = @Gender)
+
+
+Select * from fn_EmployeesByGender('Male')
+
+
+Part 32
+Create Function fn_MSTVF_GetEmployees()
+Returns @Table Table (Id int, Name nvarchar(20), DOB Date)
+as
+Begin
+ Insert into @Table
+ Select Id, Name, Cast(DateOfBirth as Date)
+ From tblEmployees
+ 
+ Return
+End
+
+
+Select * from fn_MSTVF_GetEmployees()
+
+
+Part 33
+We will be using tblEmployees table, for the rest of our examples. Please, create the table using this script.
+CREATE TABLE [dbo].[tblEmployees]
+(
+ [Id] [int] Primary Key,
+ [Name] [nvarchar](50) NULL,
+ [DateOfBirth] [datetime] NULL,
+ [Gender] [nvarchar](10) NULL,
+ [DepartmentId] [int] NULL
+)
+
+Insert rows into the table using the insert script below.
+Insert into tblEmployees values(1,'Sam','1980-12-30 00:00:00.000','Male',1)
+Insert into tblEmployees values(2,'Pam','1982-09-01 12:02:36.260','Female',2)
+Insert into tblEmployees values(3,'John','1985-08-22 12:03:30.370','Male',1)
+Insert into tblEmployees values(4,'Sara','1979-11-29 12:59:30.670','Female',3)
+Insert into tblEmployees values(5,'Todd','1978-11-29 12:59:30.670','Male',1)
+
+
+Create Function fn_GetEmployeeNameById(@Id int)
+Returns nvarchar(20)
+as
+Begin
+ Return (Select Name from tblEmployees Where Id = @Id)
+End
+
+
+Alter Function fn_GetEmployeeNameById(@Id int)
+Returns nvarchar(20)
+With Encryption
+as
+Begin
+ Return (Select Name from tblEmployees Where Id = @Id)
+End
+
+
+Alter Function fn_GetEmployeeNameById(@Id int)
+Returns nvarchar(20)
+With SchemaBinding
+as
+Begin
+ Return (Select Name from dbo.tblEmployees Where Id = @Id)
+End

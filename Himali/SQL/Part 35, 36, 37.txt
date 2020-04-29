@@ -1,0 +1,21 @@
+part 35 ,
+Select *From tblEmployee
+Select * from tblDepartment
+
+Create  Index IX_tblEmployee_Salary
+On tblEmployee (Salary ASC)
+
+Part 36
+Create Clustered  Index IX_tblEmployeeSalary
+On tblEmployee (Salary ASC)
+
+Create NonClustered  Index IX_tblDepartmentName
+On tblDepartment (DepartmentName)
+
+
+Part 37
+Select * From Student 
+
+
+Create Unique NonClustered Index UIX_tblEmployee_FirstName_LastName
+On Student(FirstName, LastName)
