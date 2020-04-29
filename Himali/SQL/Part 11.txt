@@ -1,0 +1,39 @@
+Update tblPerson 
+Set Salary = 40000
+Where ID = 2
+
+Update tblPerson 
+Set Salary = 40000
+Where ID = 3
+
+Update tblPerson 
+Set Salary = 30000
+Where ID = 4
+
+Update tblPerson 
+Set Salary = 30000
+Where ID = 5
+
+Update tblPerson 
+Set Salary = 30000
+Where ID = 6
+ 
+Update tblPerson 
+Set Salary = 25000
+Where ID = 7
+
+Update tblPerson 
+Set Salary = 25000
+Where ID = 8
+
+Update tblPerson 
+Set Salary = 20000
+Where ID = 9
+
+Update tblPerson 
+Set Salary = 20000
+Where ID = 10
+
+Select Gender , City , SUM(Salary) as TotalSalary 
+From tblPerson
+Group by Gender, City

@@ -1,0 +1,6 @@
+Part 5
+Cascading referential integrity constraint 
+
+Set Delete rule to default 
+
+Delete from tblGender where GenID = 2

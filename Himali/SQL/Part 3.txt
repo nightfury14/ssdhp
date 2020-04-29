@@ -1,0 +1,104 @@
+Part 3 Creating and working with tables
+
+Create Table tblPerson
+(
+ID int NOT NULL Primary key,
+[Name] nvarchar(50) NOT NULL,
+Email nvarchar(50),
+Gender int
+)
+
+
+Create Table tblGender
+(
+GenID int NOT NULL Primary Key,
+Gender nvarchar(50)
+)
+
+ALTER TABLE tblPerson 
+ADD CONSTRAINT FK_GenderOrder
+FOREIGN KEY (Gender) REFERENCES tblGender(GenID);
+	
+
+Insert Into tblGender(GenID, Gender)
+Values(1 , 'Male') 
+Insert Into tblGender(GenID, Gender)
+Values(2 , 'Female') 
+
+@Suyog 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(  1, 'Michael Scott', 'michael@yahoo.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 2 , 'Jim Halpert', 'jim@yahoo.com' , 1)
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 3, 'Pam Beesley', 'pam@yahoo.com' ,2  )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(4 , 'Dwight Schrute', 'dwight@yahoo.com' ,1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 5 , 'Angela Martin', 'angela@yahoo.com' , 2 )
+
+@Shivam
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(  1, 'Shivam Mehta', 'shiv@gmail.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 2 , 'Sneha Chitale', 'sc@gmail.com' , 2)
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 3, 'Raj Jogi', 'raj@gmail.com' ,1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 4 , 'Mohsin Sayed', 'moh@gmail.com' ,1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 5, 'Rushi Desai', 'rd@gmail.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 6 , 'Tapan Gada', 'tg@gmail.com' ,1 )
+
+@Divya 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 1 , 'Divya Tadooru', 'divya15@gmail.com' , 2 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(2  , 'Dhruv Panchal', 'dhruv06@gmail.com' ,1  )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 3 , 'Vijay Devarkonda', 'vijay10@Gmail.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 4 , 'Vicky Kaushal', 'vicky20@gmail.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 5 , 'Saurabhi Deshmukh', 'saurabhi25@gmail.com' , 2 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 6 , 'Priyal Karkera', 'priyal22@gmail.com' ,2 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 7 , 'Ranchana Gupta', 'ranchana13@gmail.com' ,  2)
+
+@Pavan
+
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(  1, 'Chandler Bing', 'ch@yahoo.com' ,1  )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(  2, 'Joey Tribbiani', 'jt@yahoo.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 3 , 'Rachel Green', 'rg@yahoo.com' , 2 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(  4, 'Ross Geller', 'rg@yahoo.com' , 1 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 5 , 'Monica Geller', 'mg@yahoo.com' , 2 )
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values( 6 , 'Phoebe Buffay', 'pb@yahoo.com' , 2 )
+
+
+@Himali
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(1 , 'Raymond Holt', 'rayholt@gmail.com' , 1) 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(2 , 'Jake Peralta', 'jake@gmail.com' , 1) 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(3 , 'Amy Santiago', 'amy.com' , 2) 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(4 , 'Charles Boyle', 'charles@gmail.com' , 1) 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(5 , 'Rosa Diaz', 'rosa@gmail.com' , 2)
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(6 , 'Terry Jeffords', 'terry@gmail.com' , 1) 
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(7 , 'Gina Linetti', 'gina@gmail.com' , 2)
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(8 , 'Scully', 'scully@gmail.com' , 1)
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(9 , 'Hitchcock', 'hitchcock@gmail.com' , 1)

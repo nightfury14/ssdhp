@@ -1,0 +1,46 @@
+Part 4
+
+
+Select * from tblPerson
+Select * from tblGender
+
+ALTER TABLE tblPerson
+ADD CONSTRAINT DF_tblPerson
+DEFAULT 3 FOR Gender
+
+
+ALTER TABLE tblPerson
+DROP CONSTRAINT DF_tblPerson
+
+
+@Shivam
+Insert Into tblPerson(ID, [Name] , Email )
+Values(7 , 'Parth Mehta', 'pm@gmail.com')
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(9 , 'Hitchcock', 'hitchcock@gmail.com', NULL)
+
+@Divya
+Insert Into tblPerson(ID, [Name] , Email )
+Values(8 , 'Anuj Nair', 'an22@gmail.com')
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(8 , 'Tamanna Bhatiya', 'tb22@gmail.com', NULL)
+
+@Pavan
+Insert Into tblPerson(ID, [Name] , Email )
+Values(7 , 'Walter White', 'ww@yahoo.com')
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(8 , 'Jesse Pinkman', 'jp@gmail.com', NULL)
+
+@Suyog
+Insert Into tblPerson(ID, [Name] , Email )
+Values(6 , 'Arya Stark', 'arya22@yahoo.com')
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(7 , 'jon Snow', 'jon@yahoo.com', NULL)
+
+@Himali
+Insert Into tblPerson(ID, [Name] , Email )
+Values(8 , 'Scully', 'scully@gmail.com')
+Insert Into tblPerson(ID, [Name] , Email , Gender)
+Values(9 , 'Hitchcock', 'hitchcock@gmail.com', NULL)
+
+ 

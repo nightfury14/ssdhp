@@ -1,0 +1,22 @@
+
+Select * from tblPerson
+
+Select Distinct Name From tblPerson
+
+Select * from tblPerson where Age = 20
+
+Select * from tblPerson where Age!= 30
+
+Select * from tblPerson where Name LIKE 'A%'
+
+Select * from tblPerson where Age In (30 , 32 , 35)
+
+Select * from tblPerson where Age Between 40 and 45
+
+Select * from tblPerson where Email Like '____@%'
+
+Select * from tblPerson where Name LIKE '[AB]%'
+
+Select * from tblPerson where Name LIKE '[^AB]%'
+
+

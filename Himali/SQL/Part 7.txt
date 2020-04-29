@@ -1,0 +1,32 @@
+
+Select * from Employee
+
+Create Table Employee
+(
+ID int Not null Primary Key Identity(1,1),
+[Name] nvarchar(20) Not null
+)
+
+Insert Into Employee ([Name])
+Values('Ria')
+Insert Into Employee ([Name])
+Values('Arjun')
+
+SET IDENTITY_INSERT Employee ON
+
+Insert Into Employee (ID ,[Name])
+Values(3, 'Parth')
+
+SET IDENTITY_INSERT Employee OFF
+
+
+
+
+
+
+
+
+
+
+
+
