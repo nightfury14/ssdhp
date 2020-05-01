@@ -8,14 +8,14 @@ ID int Not null Primary Key Identity(1,1),
 )
 
 Insert Into Employee ([Name])
-Values('Ria')
+Values('Kelly')
 Insert Into Employee ([Name])
-Values('Arjun')
+Values('Kevin')
 
 SET IDENTITY_INSERT Employee ON
 
 Insert Into Employee (ID ,[Name])
-Values(3, 'Parth')
+Values(3, 'Phyllis')
 
 SET IDENTITY_INSERT Employee OFF
 

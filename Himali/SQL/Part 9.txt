@@ -4,18 +4,18 @@ Add Constraint UK_tblPerson_Email Unique(Email)
 
 @Syuog @Pavan
 Insert Into tblPerson 
-Values (8, 'Sansa Mark' , 'sk@yahoo.com', 2 , 25)
+Values (8, 'Sansa Stark' , 'sk@test.com', 2 , 25)
 
 Insert Into tblPerson 
-Values (9, 'Khal Drogo' , 'sk@yahoo.com', 1 , 30)
+Values (9, 'Khal Drogo' , 'sk@test.com', 1 , 30)
 
 
 @Shivam @ Divya
 
 Insert Into tblPerson 
-Values (6, 'Preeti ' , 'P108@yahoo.com', 1 , 21)
+Values (6, 'Arya' , 'arya@test.com', 1 , 21)
 Insert Into tblPerson 
-Values (7, 'Kabir' , 'p108@yahoo.com', 1 , 20)
+Values (7, 'Bran' , 'bran@test.com', 1 , 20)
 
 Alter Table tblPerson
 Drop Constraint UK_tblPerson_Email 

@@ -33,9 +33,9 @@ Values(8 , 'Jesse Pinkman', 'jp@gmail.com', NULL)
 
 @Suyog
 Insert Into tblPerson(ID, [Name] , Email )
-Values(6 , 'Arya Stark', 'arya22@yahoo.com')
+Values(6 , 'Erin', 'erin22@test.com')
 Insert Into tblPerson(ID, [Name] , Email , Gender)
-Values(7 , 'jon Snow', 'jon@yahoo.com', NULL)
+Values(7 , 'Andrew Bernard', 'andrew@test.com', NULL)
 
 @Himali
 Insert Into tblPerson(ID, [Name] , Email )

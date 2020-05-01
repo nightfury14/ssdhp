@@ -1,25 +1,25 @@
 Update tblPerson 
-Set Salary = 40000
+Set Salary = 43000
 Where ID = 2
 
 Update tblPerson 
-Set Salary = 40000
+Set Salary = 50000
 Where ID = 3
 
 Update tblPerson 
-Set Salary = 30000
+Set Salary = 33400
 Where ID = 4
 
 Update tblPerson 
-Set Salary = 30000
+Set Salary = 33000
 Where ID = 5
 
 Update tblPerson 
-Set Salary = 30000
+Set Salary = 44000
 Where ID = 6
  
 Update tblPerson 
-Set Salary = 25000
+Set Salary = 35000
 Where ID = 7
 
 Update tblPerson 
