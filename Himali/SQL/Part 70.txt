@@ -1,3 +1,12 @@
+create table Accounts 
+( Id int primary key,
+AccountName nvarchar(50),
+Balance int
+)
+
+insert into Accounts Values (1, 'Mark', 1000)
+insert into Accounts Values (2, 'Mary', 1000)
+
 BEGIN TRY
     BEGIN TRANSACTION
          UPDATE Accounts SET Balance = Balance - 100 WHERE Id = 1

@@ -5,6 +5,21 @@ Update tblInventory set ItemsInStock = 5 where Id = 1
 waitfor delay '00:00:10'
 Commit Transaction
 
+
+Set transaction isolation level serializable
+Begin Transaction
+Update tblInventory set ItemsInStock = 5 where Id = 1
+waitfor delay '00:00:10'
+Commit Transaction
+
+
+
 -- Transaction 2
+
+Alter database ---DatabaseName--- SET ALLOW_SNAPSHOT_ISOLATION ON
+Set transaction isolation level snapshot
+
 Set transaction isolation level serializable
 Select ItemsInStock from tblInventory where Id = 1
+
+Update tblInventory set ItemsInStock = 8 where Id = 1
